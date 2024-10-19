@@ -104,7 +104,7 @@ static int rm_pogo_parse_dt(struct rm_pogo_data *pdata)
 
 		pdata->one_wire_gpio = devm_gpiod_get(pdata->dev,
 							  "one-wire",
-							  GPIOD_IN);
+							  GPIOF_IN);
 		if (IS_ERR(pdata->one_wire_gpio)) {
 			dev_err(pdata->dev,
 				"%s: Failed to read property one-wire-gpio "
